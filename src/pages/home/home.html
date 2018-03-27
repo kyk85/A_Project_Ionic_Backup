@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
       An Ionic Project
     </ion-title>
@@ -7,8 +12,62 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div>
+    <ion-card>
+      <img src="../assets/imgs/logo.png"/>
+      <ion-card-content>
+        <ion-card-title>
+          Who We are
+        </ion-card-title>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione delectus odit iusto deserunt natus. Voluptatibus facere, inventore rerum laboriosam consectetur adipisci perferendis, veritatis aut beatae eum quam maxime modi saepe.
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div>
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>
+          What We Provide
+        </ion-card-title>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, eaque quibusdam, nobis aliquid sit quis reiciendis inventore dignissimos expedita quisquam voluptate doloremque quo incidunt molestiae nemo accusantium ad. Placeat, eaque?</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div>
+    <ion-card>
+      <img src="../assets/imgs/logo.png"/> <!-- temp google maps -->
+      <ion-card-content>
+        <ion-card-title>
+          Our Location
+        </ion-card-title>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, eaque quibusdam, nobis aliquid sit quis reiciendis inventore dignissimos expedita quisquam voluptate doloremque quo incidunt molestiae nemo accusantium ad. Placeat, eaque?</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <br>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        For Further Enquiries
+      </ion-card-header>
+      <ion-list no-lines>
+        <form [formGroup]="enquiryForm">
+          <ion-item>  
+            <ion-label color="primary" stacked>Name:</ion-label>
+            <ion-input formControlName="name" type="Name" placeholder="Your Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" stacked>Email:</ion-label>
+            <ion-input formControlName="email" type="Email" placeholder="Your Email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" stacked>Comments:</ion-label>
+            <ion-textarea formControlName="comments" type="Comments"></ion-textarea>
+          </ion-item>
+        </form>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>
